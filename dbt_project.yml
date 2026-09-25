@@ -16,8 +16,13 @@ clean-targets:
 
 models:
   netflix:
-    +materialized: view
-    dim:
-      +materialized: table
-    fct:
-      +materialized: table
+    bronze:
+      +schema: bronze
+    silver:
+      +schema: silver
+    gold:
+      +schema: gold
+
+
+
+ 

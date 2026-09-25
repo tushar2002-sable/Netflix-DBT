@@ -49,8 +49,9 @@ models:
         tests:
           - not_null
           - relationships:
-              to: ref('dim_movies')
-              field: movieid
+              arguments:
+                to: ref('dim_movies')
+                field: movieid
       - name: rating
         description: User's rating for a movie
         tests:
